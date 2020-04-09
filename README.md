@@ -13,13 +13,16 @@ This script, run_analysis.R, will read the following input data sets:
  
 Two directories exist to provide locations for the data recording durinng TEST and TRAINING phases.  Each contains the following datasets, which are used by the R script:
 
- -- X_test.txt (or X_train.txt) -- which contains the majority of the data points collected, with the exception of the associated activities and subjects.  These are included from the next two listed files
+ -- X_test.txt (or X_train.txt) -- which contains the majority of the data points collected, with the exception of the associated activities and subjects.  These are included from the next two listed files.
+ 
  -- y_test.txt (or y_train.txt) -- contains the activity codes corresponding to the rows found in the aforementioned X-named file(s). These activity codes can be shown as descriptive text by using the labels from activity_labels.txt above.
+ 
  -- subject_test.txt (or subject_train.txt) -- contains the subject code numbers corresponding to the rows found in the aforementioned X-named file(s).
  
  The R script will input the files listed above, and then proceeds to tidy up the data according to the guidance provided in the assignment.  The script will write out two separate CSV formatted output data files, which may be separately inspected in MS Excel, if desired.  These are:
  
  -- Tidy_Combined_DS_Test_and_Train.csv -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  A subset of the original recorded data point values has been reduced to only means and standard deviation type values, those with the following column name characteristics included within:
+ 
    mean(): Mean value
    std():  Standard deviation
 
