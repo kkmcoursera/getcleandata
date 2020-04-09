@@ -2,6 +2,10 @@
 #  run_analysis.R -- Assignment for the 'Getting and Cleaning Data' course
 ##
 
+# Required (for the arrange function): dplyr library
+install.packages("dplyr")
+library(dplyr)
+
 # Please note that the zip file has previously been downloaded and extracted into the 
 # working directory below.
 #
@@ -22,8 +26,11 @@ y_train <- read.table("./train/y_train.txt")
 s_train  <- read.table("./train/subject_train.txt")
 
 # Select only the columns representing Standard Deviation and Mean values
-sel_cols <- grep("mean()|std()", f$V2)
+sel_cols <- grep("mean|std", f$V2)
 f2 <- f[sel_cols, ]
+
+# Note: For the above selection, we ignore Mean Frequencies & Angles of Means
+sel_col2 <- grep("meanFreq|angle", f2$V2, invert = TRUE)
 
 # Remove () from the Column Headers because they are extraneous characters there
 f_sel <- sub("\\(\\)", "", f2[sel_col2, 2])
@@ -77,8 +84,7 @@ x_combined <- rbind(x_sel_test, x_sel_train)
 names(x_combined)[1] <- "subject"
 
 # Write tidy data frame to a CSV format out file, in the original folder as the input
-write.csv(x_output, file = "./Tidy_Combined_DS_Test_and_Training.csv", 
-          row.names = FALSE)
+write.csv(x_combined, file = "./Tidy_Combined_DS_Test_and_Train.csv", row.names = FALSE)
 
 
 # ASSIGNMENT OBJECTIVE #5: 
@@ -89,9 +95,7 @@ write.csv(x_output, file = "./Tidy_Combined_DS_Test_and_Training.csv",
 x_sorted <- arrange(x_combined, subject, activity)
 
 # Average the detail data by subject number, and then, activity within subject
-x_average <- aggregate(x = x_sorted, 
-                       by = list(factor(x_sorted$activity), 
-                                 factor(x_sorted$subject)), FUN = "mean")
+x_average <- aggregate(x = x_sorted, by = list(factor(x_sorted$activity), factor(x_sorted$subject)), FUN = "mean")
 
 # Perform some clean-up activity: Remove unneeded columns, fix column headings
 x_output <- subset(x_average, select = -c(source, activity))
@@ -100,8 +104,7 @@ names(x_output)[2] <- "Subject"
 x_output <- subset(x_output, select = -c(subject))
 
 # Write results to a CSV format out file, in the original folder as the input
-write.csv(x_output, file = "./Summary_by_Subject_and_Activity.csv", 
-          row.names = FALSE)
+write.csv(x_output, file = "./Summary_by_Subject_and_Activity.csv", row.names = FALSE)
 
 
 
