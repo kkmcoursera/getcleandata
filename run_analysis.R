@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ##
 #  run_analysis.R -- Assignment for the 'Getting and Cleaning Data' course
 ##
@@ -217,7 +216,3 @@ x_output <- subset(x_output, select = -c(subject))
 
 # Write results to a CSV format out file, in the original folder as the input
 write.csv(x_output, file = "./Summary_by_Subject_and_Activity.csv", row.names = FALSE)
-
-
-
->>>>>>> 0f9530a00cf0477520d2199fa3b9f38201113159

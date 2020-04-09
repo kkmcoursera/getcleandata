@@ -21,7 +21,9 @@ Two directories exist to provide locations for the data recording durinng TEST a
  
  The R script will input the files listed above, and then proceeds to tidy up the data according to the guidance provided in the assignment.  The script will write out two separate CSV formatted output data files, which may be separately inspected in MS Excel, if desired.  These are:
  
- -- Tidy_Combined_DS_Test_and_Train.csv -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  A subset of the original recorded data point values has been reduced to only means and standard deviation type values, those with the following column name characteristics included within:
+ -- Tidy_Combined_DS_Test_and_Train.csv -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  
+
+A subset of the original recorded data point values has been reduced to only means and standard deviation type values, those with the following column name characteristics included within:
  
    mean(): Mean value
    std():  Standard deviation
@@ -36,50 +38,66 @@ Required (for the arrange function): 'dplyr' library
 
 Prior to running the R script, the zip file was downloaded and extracted into the working directory.
 
-The following steps were performed in the R script (as also referenced in the comments), 
-to prepare a tidy dataset, and then, once complete, to also create a secondary, summary 
-dataset of average values for the subset of column data prepared in the initial processing.
+The following steps were performed in the R script (as also referenced in the comments), to prepare a tidy dataset, and then, once complete, to also create a secondary, summary dataset of average values for the subset of column data prepared in the initial processing.
 
 -- Set the location of the downloaded, unzipped datasets
+
 -- Read in the Features column names and Activity labels datasets
+
 -- Read in the TEST & TRAINING datasets
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #2: 
+   
    Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 -- Select only the columns representing Standard Deviation and Mean values
+
 -- For the above selection, we ignore Mean Frequencies & Angles of Means
+
 -- Remove '()' from the Column Headers because they are extraneous characters there
+
 -- Isolate the columns from the datasets which contain Standard Deviation or Mean
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #4: 
+
    Appropriately labels the data set with descriptive variable names.
 
 -- Apply descriptive column headings
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #3: 
+
    Uses descriptive activity names to name the activities in the data set.
 
 -- Associate activity codes from the 'Y' file, convert to name, and apply as column 
+
 -- Denote test dataset's source as "TEST", and training dataset's as "TRAINING"
+
 -- Associate the subject code from "subject_test.txt" and apply as column
+
 -- Associate the subject code from "subject_train.txt" and apply as column
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #1: 
+
    Merges the training and the test sets to create one data set.
 
 -- Merge the rows from both datasets into one combined
+
 -- Write tidy data frame to a CSV format out file, in the original folder as the input
 
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #5: 
+
    From the data set in step 4, creates a second, independent tidy data set 
    with the average of each variable for each activity and each subject.
 
 -- Sort the resulting data frame
+
 -- Average the detail data by subject number, and then, activity within subject
+
 -- Perform some clean-up activity: Remove unneeded columns, fix column headings
+
 -- Write results to a CSV format out file, in the original folder as the input
+
 
 
 
