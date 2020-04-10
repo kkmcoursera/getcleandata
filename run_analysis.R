@@ -194,7 +194,7 @@ x_sel_train <- cbind(subject=s_train, x_sel_train)
 x_combined <- rbind(x_sel_test, x_sel_train)
 names(x_combined)[1] <- "subject"
 
-# Write tidy data frame to a CSV format out file, in the original folder as the input
+# Write tidy data frame to a text format output file, in the original folder as the input
 write.table(x_combined, file = "./Tidy_Combined_DS_Test_and_Train.txt", row.names = FALSE)
 
 
@@ -214,5 +214,5 @@ names(x_output)[1] <- "Activity"
 names(x_output)[2] <- "Subject"
 x_output <- subset(x_output, select = -c(subject))
 
-# Write results to a CSV format out file, in the original folder as the input
+# Write results to a text format output file, in the original folder as the input
 write.table(x_output, file = "./Summary_by_Subject_and_Activity.txt", row.names = FALSE)

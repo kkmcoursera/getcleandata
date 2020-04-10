@@ -31,8 +31,9 @@ A subset of the original recorded data point values has been reduced to only mea
   -- Summary_by_Subject_and_Activity.txt -- a second dataset, which will aggregate the data by subject number and activity type, and calculate an average of each recorded data column, previously selected for inclusion (that is, means and standard deviation values).
   
 Information about the R script code and the steps that it executes is detailed below:
+===========
 
-run_analysis.R -- Assignment for the 'Getting and Cleaning Data' course
+*run_analysis.R* -- Assignment for the 'Getting and Cleaning Data' course
 
 Required (for the arrange function): 'dplyr' library
 
@@ -82,7 +83,7 @@ The following steps were performed in the R script (as also referenced in the co
 
 -- Merge the rows from both datasets into one combined
 
--- Write tidy data frame to a CSV format out file, in the original folder as the input
+-- Write tidy data frame to a text format output file, in the original folder as the input
 
 
 ** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #5: 
@@ -96,7 +97,7 @@ The following steps were performed in the R script (as also referenced in the co
 
 -- Perform some clean-up activity: Remove unneeded columns, fix column headings
 
--- Write results to a CSV format out file, in the original folder as the input
+-- Write results to a text format output file, in the original folder as the input
 
 
 
