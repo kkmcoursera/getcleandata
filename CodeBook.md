@@ -2,13 +2,11 @@ Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 
 Note: 
-====
 A "tidy" dataset, containing only means and standard deviation values, related to specific subjects and activities, as referenced to either testing or training recordings, has been created as part of the Coursera assignment.
 
 In addition, another dataset, created from the above "tidy" dataset, was prepared from a summation of recorded values, which were thereafter averaged for subject-activity pairs.
 
 Authors of and contact information for the original v1.0 study are:
-==================================================================
 
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory

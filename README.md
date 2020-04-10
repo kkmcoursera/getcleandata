@@ -21,14 +21,14 @@ Two directories exist to provide locations for the data recording durinng TEST a
  
  The R script will input the files listed above, and then proceeds to tidy up the data according to the guidance provided in the assignment.  The script will write out two separate CSV formatted output data files, which may be separately inspected in MS Excel, if desired.  These are:
  
- -- Tidy_Combined_DS_Test_and_Train.csv -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  
+ -- Tidy_Combined_DS_Test_and_Train.txt -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  
 
 A subset of the original recorded data point values has been reduced to only means and standard deviation type values, those with the following column name characteristics included within:
  
    mean(): Mean value
    std():  Standard deviation
 
-  -- Summary_by_Subject_and_Activity.csv -- a second dataset, which will aggregate the data by subject number and activity type, and calculate an average of each recorded data column, previously selected for inclusion (that is, means and standard deviation values).
+  -- Summary_by_Subject_and_Activity.txt -- a second dataset, which will aggregate the data by subject number and activity type, and calculate an average of each recorded data column, previously selected for inclusion (that is, means and standard deviation values).
   
 Information about the R script code and the steps that it executes is detailed below:
 
