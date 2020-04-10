@@ -19,7 +19,7 @@ Two directories exist to provide locations for the data recording durinng TEST a
  
  -- **subject_test.txt** (or subject_train.txt) -- contains the subject code numbers corresponding to the rows found in the aforementioned X-named file(s).
  
- The R script will input the files listed above, and then proceeds to tidy up the data according to the guidance provided in the assignment.  The script will write out two separate CSV formatted output data files, which may be separately inspected in MS Excel, if desired.  These are:
+ The R script will input the files listed above, and then proceeds to tidy up the data according to the guidance provided in the assignment.  The script will write out two separate text output data files, which may be separately inspected in MS Excel, if desired.  These are:
  
  -- **Tidy_Combined_DS_Test_and_Train.txt** -- which contains a combined dataset, resulting from both test and training input, enhanced with readable column headings, noted with activity description, type of record ('TEST' or 'TRAINING'), and a number relating the subject participating to generate the data row.  
 
@@ -33,7 +33,7 @@ A subset of the original recorded data point values has been reduced to only mea
 ### Information about the R script code and the steps that it executes is detailed below:
 
 
-*run_analysis.R* -- Assignment for the 'Getting and Cleaning Data' course
+**run_analysis.R** -- Assignment for the 'Getting and Cleaning Data' course
 
 Required (for the arrange function): **'dplyr'** library
 
@@ -47,8 +47,8 @@ The following steps were performed in the R script (as also referenced in the co
 
 -- Read in the TEST & TRAINING datasets
 
-** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #2: **
-   Extracts only the measurements on the mean and standard deviation for each measurement. 
+### Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #2:
+**Extracts only the measurements on the mean and standard deviation for each measurement.**
 
 -- Select only the columns representing Standard Deviation and Mean values
 
@@ -58,13 +58,13 @@ The following steps were performed in the R script (as also referenced in the co
 
 -- Isolate the columns from the datasets which contain Standard Deviation or Mean
 
-** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #4: **
-   Appropriately labels the data set with descriptive variable names.
+### Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #4: 
+**Appropriately labels the data set with descriptive variable names.**
 
 -- Apply descriptive column headings
 
-** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #3: **
-   Uses descriptive activity names to name the activities in the data set.
+### Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #3:  
+**Uses descriptive activity names to name the activities in the data set.**
 
 -- Associate activity codes from the 'Y' file, convert to name, and apply as column 
 
@@ -74,18 +74,16 @@ The following steps were performed in the R script (as also referenced in the co
 
 -- Associate the subject code from "subject_train.txt" and apply as column
 
-** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #1: **
-   Merges the training and the test sets to create one data set.
+### Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #1:  
+**Merges the training and the test sets to create one data set.**
 
 -- Merge the rows from both datasets into one combined
 
 -- Write tidy data frame to a text format output file, in the original folder as the input
 
 
-** Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #5: **
-
-   From the data set in step 4, creates a second, independent tidy data set 
-   with the average of each variable for each activity and each subject.
+### Note: The below set of steps achieve ASSIGNMENT OBJECTIVE #5: 
+**From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.**
 
 -- Sort the resulting data frame
 
