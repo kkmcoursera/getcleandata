@@ -10,7 +10,8 @@ library(dplyr)
 # working directory below.
 #
 # Set the location of the downloaded, unzipped datasets
-setwd("C:/Users/KkM/Desktop/UCI_HAR_ds/")
+### Commenting out the setting working directory used during development
+### setwd("C:/Users/KkM/Desktop/UCI_HAR_ds/")
 
 # Read in the Features column names and Activity labels datasets
 f <- read.table("./Features.txt")
