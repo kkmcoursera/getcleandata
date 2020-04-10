@@ -184,7 +184,7 @@ The complete list of variables of each feature vector is shown below.
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
 
-License:
+### License Information:
 
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
